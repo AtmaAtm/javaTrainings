@@ -12,8 +12,8 @@ public class helperfortest1 {
     //     Weight is [phone weight]"
 
     public String model;
-    public int number;
-    public int weight;
+    public String number;
+    public double weight;
 
     public String getModel() {
         return model;
@@ -23,19 +23,19 @@ public class helperfortest1 {
         this.model = model;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 }

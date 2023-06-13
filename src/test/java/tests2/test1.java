@@ -12,49 +12,57 @@ package tests2;
 import java.util.Scanner;
 
 public class test1 {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+
+        public static void main(String[] args) {
+            helperfortest1 iphone = new helperfortest1();
+            helperfortest1 samsung = new helperfortest1();
+            helperfortest1 huawei = new helperfortest1();
+
+            // Set values for each instance using user input
+            System.out.println("Enter details for the first phone:");
+            setPhoneDetails(iphone);
+
+            System.out.println("Enter details for the second phone:");
+            setPhoneDetails(samsung);
+
+            System.out.println("Enter details for the last:");
+            setPhoneDetails(huawei);
+
+            // Print all values for each Phone instance
+
+            printPhoneDetails(iphone);
 
 
-        helperfortest1 iPhone = new helperfortest1();
-        helperfortest1 Samsung = new helperfortest1();
-        helperfortest1 Huawei = new helperfortest1();
-
-        System.out.println("Add phone: ");
-
-        iPhone.setModel(in.nextLine());
-        iPhone.setNumber(in.nextInt());
-        iPhone.setWeight(in.nextInt());
-
-        System.out.println("Add another phone: ");
-
-        Samsung.setModel(in.next());
-        Samsung.setNumber(in.nextInt());
-        Samsung.setWeight(in.nextInt());
-
-        System.out.println("Add the last phone: ");
-
-        Huawei.setModel(in.next());
-        Huawei.setNumber(in.nextInt());
-        Huawei.setWeight(in.nextInt());
+            printPhoneDetails(samsung);
 
 
-        System.out.println(iPhone.getModel() + ": ");
-        System.out.println("Model is: " + iPhone.getModel());
-        System.out.println("Number is: " + iPhone.getNumber());
-        System.out.println("Weight is: " + iPhone.getWeight() + " gr");
+            printPhoneDetails(huawei);
+        }
 
-        System.out.println(Samsung.getModel() + ": ");
-        System.out.println("Model is: " + Samsung.getModel());
-        System.out.println("Number is: " + Samsung.getNumber());
-        System.out.println("Weight is: " + Samsung.getWeight() + " gr");
+        // Set model, number, and weight for a Phone instance
+        public static void setPhoneDetails(helperfortest1 phone) {
+            Scanner scanner = new Scanner(System.in);
 
-        System.out.println(Huawei.getModel() + ": ");
-        System.out.println("Model is: " + Huawei.getModel());
-        System.out.println("Number is: " + Huawei.getNumber());
-        System.out.println("Weight is: " + Huawei.getWeight() + " gr");
+            System.out.print("Enter model: ");
+            String model = scanner.nextLine();
 
+            System.out.print("Enter number: ");
+            String number = scanner.nextLine();
 
+            System.out.print("Enter weight: ");
+            double weight = scanner.nextDouble();
 
+            phone.setModel(model);
+            phone.setNumber(number);
+            phone.setWeight(weight);
+        }
+
+        // Print all values for a Phone instance
+        public static void printPhoneDetails(helperfortest1 phone) {
+            System.out.println(phone.getModel() + ": ");
+            System.out.println("Model is: " + phone.getModel());
+            System.out.println("Number is: " + phone.getNumber());
+            System.out.println("Weight is: " + phone.getWeight());
+
+        }
     }
-}
