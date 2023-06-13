@@ -18,7 +18,7 @@ public class test1 {
             helperfortest1 samsung = new helperfortest1();
             helperfortest1 huawei = new helperfortest1();
 
-            // Set values for each instance using user input
+            // устанавливаю значения для каждого экземпляра
             System.out.println("Enter details for the first phone:");
             setPhoneDetails(iphone);
 
@@ -28,18 +28,14 @@ public class test1 {
             System.out.println("Enter details for the last:");
             setPhoneDetails(huawei);
 
-            // Print all values for each Phone instance
+            // вывожу инфу для каждого телефона
 
             printPhoneDetails(iphone);
-
-
             printPhoneDetails(samsung);
-
-
             printPhoneDetails(huawei);
         }
 
-        // Set model, number, and weight for a Phone instance
+        // устанавливаю model, number, and weight
         public static void setPhoneDetails(helperfortest1 phone) {
             Scanner scanner = new Scanner(System.in);
 
@@ -57,7 +53,7 @@ public class test1 {
             phone.setWeight(weight);
         }
 
-        // Print all values for a Phone instance
+        // вывожу все
         public static void printPhoneDetails(helperfortest1 phone) {
             System.out.println(phone.getModel() + ": ");
             System.out.println("Model is: " + phone.getModel());
